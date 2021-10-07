@@ -3,7 +3,6 @@ from pygame.draw import *
 
 pygame.init()
 
-
 sky_blue = (0, 255, 255)
 grass_green = (0, 255, 0)
 leaf_green = (0, 128, 0)
@@ -18,15 +17,12 @@ hair3 = (255, 238, 170)
 hair4 = (229, 255, 128)
 hair5 = (175, 233, 221)
 
-
 FPS = 30
 screen = pygame.display.set_mode((800, 1200))
-
 
 rect(screen, sky_blue, (0, 0, 800, 520))
 rect(screen, grass_green, (0, 520, 800, 1200))
 circle(screen, yellow, (770, 120), 150)
-
 
 # tree
 rect(screen, white, (100, 630, 50, 150))
@@ -74,17 +70,14 @@ hair(604, 630, 1)
 polygon(screen, pink, [(606, 621), (633, 500), (635, 625)])
 ellipse(screen, hair1, (575, 610, 50, 30))
 
-
 pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
-
 
 while not finished:
     clock.tick(FPS)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             finished = True
-
 
 pygame.quit()
